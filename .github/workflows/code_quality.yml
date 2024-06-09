@@ -1,0 +1,17 @@
+name: Code quality
+
+on: [push, pull_request]
+
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y python3-venv
+      - run: |
+          python3 -m venv venv
+          venv/bin/pip install -r requirements-dev.lock
+      - run: . venv/bin/activate && make coverage
+      - run: . venv/bin/activate && make lint
