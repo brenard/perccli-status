@@ -7,3 +7,7 @@ __pycache__
 build
 dist
 *.tox
+
+.coverage
+.pytest_cache/
+venv/
