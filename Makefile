@@ -1,9 +1,8 @@
 .PHONY: all
-
-all: coverage lint
+all:
 
 install-dev:
-	apt-get update && apt-get install -y python3-venv build-essential
+	apt-get update && apt-get install -y python3-venv
 	python3 -m venv venv
 	venv/bin/pip install -r requirements-dev.txt
 
@@ -25,6 +24,9 @@ coverage:
 install:
 	mkdir -p $(DESTDIR)/usr/bin
 	install -m0755 perccli_status.py $(DESTDIR)/usr/bin/perccli-status
+
+install-build:
+	apt-get update && apt-get install -y build-essential devscripts
 
 build-deb:
 	dpkg-buildpackage -us -uc --no-pre-clean

@@ -9,9 +9,11 @@ dist
 *.tox
 
 .coverage
-.pytest_cache/
-venv/
 .pc/
-debian/perccli-status/
+.pytest_cache/
 debian/.debhelper/
 debian/debhelper-build-stamp
+debian/files
+debian/perccli-status.substvars
+debian/perccli-status/
+venv/
