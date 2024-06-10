@@ -19,9 +19,10 @@ git clone
 ```
 git clone git@github.com:bodik/perccli-status.git /opt/perccli-status
 cd /opt/perccli-status
-python3 -m venv venv
+make install-dev
 . venv/bin/activate
-pip install -r requirements-dev.lock
 make coverage
 make lint
+
+make build-deb
 ```
