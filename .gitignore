@@ -11,3 +11,7 @@ dist
 .coverage
 .pytest_cache/
 venv/
+.pc/
+debian/perccli-status/
+debian/.debhelper/
+debian/debhelper-build-stamp
