@@ -4,15 +4,13 @@ Priority: optional
 Maintainer: Radoslav Bodó <radoslav.bodo@igalileo.cz>
 Rules-Requires-Root: no
 Build-Depends:
- debhelper-compat (= 13),
+ debhelper-compat (= 13)
 Standards-Version: 4.6.2
 Homepage: https://github.com/bodik/perccli-status
-#Vcs-Browser: https://salsa.debian.org/debian/perccli-status
-#Vcs-Git: https://salsa.debian.org/debian/perccli-status.git
 
 Package: perccli-status
 Architecture: any
-Depends: perccli2
+Depends: perccli2, daemon
 Description:  The perccli-status software is a query tool to access the running
  configuration and status of PERC SAS HBAs.
  .

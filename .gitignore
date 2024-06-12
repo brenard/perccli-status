@@ -14,6 +14,7 @@ dist
 debian/.debhelper/
 debian/debhelper-build-stamp
 debian/files
+debian/perccli-status.debhelper.log
 debian/perccli-status.substvars
 debian/perccli-status/
 venv/

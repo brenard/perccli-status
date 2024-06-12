@@ -22,8 +22,7 @@ coverage:
 
 
 install:
-	mkdir -p $(DESTDIR)/usr/bin
-	install -m0755 perccli_status.py $(DESTDIR)/usr/bin/perccli-status
+	install -m0755 perccli_status.py $(DESTDIR)/usr/sbin/perccli-status
 
 install-build:
 	apt-get update && apt-get install -y build-essential devscripts
