@@ -15,3 +15,13 @@ jobs:
           venv/bin/pip install -r requirements-dev.lock
       - run: . venv/bin/activate && make coverage
       - run: . venv/bin/activate && make lint
+
+  build_package:
+    needs: [code_quality]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y build-essential devscripts
+      - run: make build-deb
