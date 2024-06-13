@@ -8,3 +8,6 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 override_dh_installinit:
 	dh_installinit --name=perccli-statusd
+
+override_dh_auto_test:
+	true
