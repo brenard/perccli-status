@@ -1,26 +1,27 @@
 # perccli-status
 Nagios/Opsview plugin to check status of PowerEdge RAID Controller
 
-Mimics `megaclisas-status` and `megaclisas-status --nagios`, uses `perccli2`.
+Mimics `megaclisas-status` and `megaclisas-status --nagios`, uses `perccli`.
 
 ## Tested with
 
-* Debian 12 Bookworm, PERC H965i, perccli2 8.4.0.22
+* Ubuntu 24.04 Noble, PERC H755, perccli 7.2110.0.0
 
 
 ## Install
 
 ```
-git clone
+apt install python3 git
+git clone https://github.com/brenard/perccli-status.git /usr/local/src/perccli-status
+ln -s /usr/local/src/perccli-status/percli_status.py /usr/local/sbin/perccli-status
 ```
 
 ## Development
 
 ```
-git clone git@github.com:bodik/perccli-status.git /opt/perccli-status
-cd /opt/perccli-status
+git clone https://github.com/brenard/perccli-status.git /usr/local/src/perccli-status
+cd /usr/local/src/perccli-status
 make install-dev
-. venv/bin/activate
 make coverage
 make lint
 

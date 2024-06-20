@@ -1,2 +1,14 @@
+[MESSAGES CONTROL]
+disable=locally-disabled,
+	line-too-long,
+	too-many-branches,
+	too-many-statements,
+	too-many-lines,
+	too-many-arguments,
+	too-many-instance-attributes,
+	too-many-public-methods,
+	too-many-return-statements,
+	too-many-locals,
+
 [FORMAT]
 max-line-length=150

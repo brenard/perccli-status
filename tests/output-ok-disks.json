@@ -2,185 +2,693 @@
 "Controllers":[
 {
 	"Command Status" : {
-		"CLI Version" : "008.0004.0000.0022 Apr 28, 2023",
-		"Operating system" : "Linux6.1.0-21-amd64",
-		"Controller" : "0",
+		"CLI Version" : "007.2110.0000.0000 Sep 27, 2022",
+		"Operating system" : "Linux 6.8.0-35-generic",
+		"Controller" : 0,
 		"Status" : "Success",
 		"Description" : "Show Drive Information Succeeded."
 	},
 	"Response Data" : {
-		"Drives List" : [
+		"Drive /c0/e252/s0" : [
 			{
-				"Drive Information" : {
-					"EID:Slt" : "292:0",
-					"PID" : 275,
-					"State" : "Conf",
-					"Status" : "Online",
-					"DG" : 0,
-					"Size" : "446.625 GiB",
-					"Intf" : "SATA",
-					"Med" : "SSD",
-					"SED_Type" : "-",
-					"SeSz" : "512B",
-					"Model" : "MTFDDAK480TGB-1Bxxxxxxx",
-					"Sp" : "U",
-					"LU/NS Count" : 1,
-					"Alt-EID" : "-"
-				},
-				"LU/NS Information" : [
-					{
-						"PID" : 275,
-						"LUN/NSID" : "0/-",
-						"Status" : "Online",
-						"Size" : "446.625 GiB"
-					}
-				],
-				"Drive Detailed Information" : {
-					"Shield Counter" : 0,
-					"Temperature(C)" : 29,
-					"Serial Number" : "xxx",
-					"Vendor" : "ATA     ",
-					"Model" : "MTFDDAK480TGB-1Bxxxxxxx",
-					"WWN" : "xxx",
-					"Firmware Revision Level" : " D4DK003",
-					"Logical Sector Size" : "512B",
-					"Physical Sector Size" : "4 KiB",
-					"Raw size" : "447.130 GiB [0x37e436b0 Sectors]",
-					"Coerced size" : "446.625 GiB [0x37d40000 Sectors]",
-					"Capable Speed" : "6.0Gb/s",
-					"Capable Link Width" : "x1",
-					"Negotiated Link Width" : "x1",
-					"Drive position" : "DriveGroup:0, Span:0, Row:0",
-					"Sequence Number" : 2,
-					"Commissioned Spare" : "No",
-					"Emergency Spare" : "No",
-					"Successful Shield Diagnostics completed on(Localtime yyyy/mm/dd hh:mm:sec)" : "NA",
-					"SED Capable" : "No",
-					"ISE Capable" : "Yes",
-					"T10 Power Mode" : "No",
-					"Needs EKM Attention" : "No",
-					"Secured By EKM" : "No",
-					"Certified" : "Yes",
-					"Supported Data Format" : "None",
-					"Device port count" : 1,
-					"Path Information" : [
-						{
-							"SASAddress" : "0xaaaaaaaa",
-							"DevicePID" : 275,
-							"Path" : "Primary",
-							"Negotiated Speed" : "6.0Gb/s",
-							"Num Phys/Lanes used" : "Unknown"
-						}
-					],
-					"LU/NS Properties" : {
-						"Media Error Count" : 0,
-						"Other Error Count" : 0,
-						"Predictive Failure Count" : 0,
-						"Last Predictive Failure Event Sequence Number" : 0,
-						"Logical Sector Size" : "512B",
-						"Physical Sector Size" : "4 KiB",
-						"Raw size" : "447.130 GiB [0x37e436b0 Sectors]",
-						"Coerced size" : "446.625 GiB [0x37d40000 Sectors]",
-						"FW managed drive security" : "No",
-						"Secured" : "No",
-						"Locked" : "No",
-						"PI Formatted" : "No",
-						"PI type" : "No PI",
-						"Number of bytes of user data in LBA" : "512B",
-						"Current Write Cache" : "Off",
-						"Default Write Cache" : "Off",
-						"Write Cache Changeable" : "No"
-					},
-					"Inquiry Data" : "40 04 "
-				}
-			},
-			{
-				"Drive Information" : {
-					"EID:Slt" : "292:1",
-					"PID" : 276,
-					"State" : "Conf",
-					"Status" : "Online",
-					"DG" : 0,
-					"Size" : "446.625 GiB",
-					"Intf" : "SATA",
-					"Med" : "SSD",
-					"SED_Type" : "-",
-					"SeSz" : "512B",
-					"Model" : "MTFDDAK480TGB-1Bxxxxxxx",
-					"Sp" : "U",
-					"LU/NS Count" : 1,
-					"Alt-EID" : "-"
-				},
-				"LU/NS Information" : [
-					{
-						"PID" : 276,
-						"LUN/NSID" : "0/-",
-						"Status" : "Online",
-						"Size" : "446.625 GiB"
-					}
-				],
-				"Drive Detailed Information" : {
-					"Shield Counter" : 0,
-					"Temperature(C)" : 29,
-					"Serial Number" : "xxx",
-					"Vendor" : "ATA     ",
-					"Model" : "MTFDDAK480TGB-1Bxxxxxxx",
-					"WWN" : "xxx",
-					"Firmware Revision Level" : " D4DK003",
-					"Logical Sector Size" : "512B",
-					"Physical Sector Size" : "4 KiB",
-					"Raw size" : "447.130 GiB [0x37e436b0 Sectors]",
-					"Coerced size" : "446.625 GiB [0x37d40000 Sectors]",
-					"Capable Speed" : "6.0Gb/s",
-					"Capable Link Width" : "x1",
-					"Negotiated Link Width" : "x1",
-					"Drive position" : "DriveGroup:0, Span:0, Row:1",
-					"Sequence Number" : 2,
-					"Commissioned Spare" : "No",
-					"Emergency Spare" : "No",
-					"Successful Shield Diagnostics completed on(Localtime yyyy/mm/dd hh:mm:sec)" : "NA",
-					"SED Capable" : "No",
-					"ISE Capable" : "Yes",
-					"T10 Power Mode" : "No",
-					"Needs EKM Attention" : "No",
-					"Secured By EKM" : "No",
-					"Certified" : "Yes",
-					"Supported Data Format" : "None",
-					"Device port count" : 1,
-					"Path Information" : [
-						{
-							"SASAddress" : "0xaaa",
-							"DevicePID" : 276,
-							"Path" : "Primary",
-							"Negotiated Speed" : "6.0Gb/s",
-							"Num Phys/Lanes used" : "Unknown"
-						}
-					],
-					"LU/NS Properties" : {
-						"Media Error Count" : 0,
-						"Other Error Count" : 0,
-						"Predictive Failure Count" : 0,
-						"Last Predictive Failure Event Sequence Number" : 0,
-						"Logical Sector Size" : "512B",
-						"Physical Sector Size" : "4 KiB",
-						"Raw size" : "447.130 GiB [0x37e436b0 Sectors]",
-						"Coerced size" : "446.625 GiB [0x37d40000 Sectors]",
-						"FW managed drive security" : "No",
-						"Secured" : "No",
-						"Locked" : "No",
-						"PI Formatted" : "No",
-						"PI type" : "No PI",
-						"Number of bytes of user data in LBA" : "512B",
-						"Current Write Cache" : "Off",
-						"Default Write Cache" : "Off",
-						"Write Cache Changeable" : "No"
-					},
-					"Inquiry Data" : "40 04 "
-				}
+				"EID:Slt" : "252:0",
+				"DID" : 7,
+				"State" : "Onln",
+				"DG" : 0,
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
 			}
-		]
+		],
+		"Drive /c0/e252/s0 - Detailed Information" : {
+			"Drive /c0/e252/s0 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 28C (82.40 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s0 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s0 Policies/Settings" : {
+				"Drive position" : "DriveGroup:0, Span:0, Row:0",
+				"Enclosure position" : "1",
+				"Connected Port Number" : "14(path0) ",
+				"Sequence Number" : 2,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		},
+		"Drive /c0/e252/s1" : [
+			{
+				"EID:Slt" : "252:1",
+				"DID" : 6,
+				"State" : "Onln",
+				"DG" : 0,
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
+			}
+		],
+		"Drive /c0/e252/s1 - Detailed Information" : {
+			"Drive /c0/e252/s1 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 29C (84.20 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s1 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s1 Policies/Settings" : {
+				"Drive position" : "DriveGroup:0, Span:0, Row:1",
+				"Enclosure position" : "0",
+				"Connected Port Number" : "13(path0) ",
+				"Sequence Number" : 2,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		},
+		"Drive /c0/e252/s2" : [
+			{
+				"EID:Slt" : "252:2",
+				"DID" : 5,
+				"State" : "Onln",
+				"DG" : 0,
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
+			}
+		],
+		"Drive /c0/e252/s2 - Detailed Information" : {
+			"Drive /c0/e252/s2 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 28C (82.40 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s2 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s2 Policies/Settings" : {
+				"Drive position" : "DriveGroup:0, Span:0, Row:2",
+				"Enclosure position" : "0",
+				"Connected Port Number" : "12(path0) ",
+				"Sequence Number" : 2,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		},
+		"Drive /c0/e252/s3" : [
+			{
+				"EID:Slt" : "252:3",
+				"DID" : 4,
+				"State" : "Onln",
+				"DG" : 0,
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
+			}
+		],
+		"Drive /c0/e252/s3 - Detailed Information" : {
+			"Drive /c0/e252/s3 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 28C (82.40 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s3 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s3 Policies/Settings" : {
+				"Drive position" : "DriveGroup:0, Span:0, Row:3",
+				"Enclosure position" : "0",
+				"Connected Port Number" : "11(path0) ",
+				"Sequence Number" : 2,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		},
+		"Drive /c0/e252/s4" : [
+			{
+				"EID:Slt" : "252:4",
+				"DID" : 3,
+				"State" : "Onln",
+				"DG" : 0,
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
+			}
+		],
+		"Drive /c0/e252/s4 - Detailed Information" : {
+			"Drive /c0/e252/s4 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 28C (82.40 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s4 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s4 Policies/Settings" : {
+				"Drive position" : "DriveGroup:0, Span:0, Row:6",
+				"Enclosure position" : "0",
+				"Connected Port Number" : "10(path0) ",
+				"Sequence Number" : 2,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		},
+		"Drive /c0/e252/s5" : [
+			{
+				"EID:Slt" : "252:5",
+				"DID" : 2,
+				"State" : "Onln",
+				"DG" : 0,
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
+			}
+		],
+		"Drive /c0/e252/s5 - Detailed Information" : {
+			"Drive /c0/e252/s5 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 29C (84.20 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s5 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s5 Policies/Settings" : {
+				"Drive position" : "DriveGroup:0, Span:0, Row:5",
+				"Enclosure position" : "0",
+				"Connected Port Number" : "9(path0) ",
+				"Sequence Number" : 2,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		},
+		"Drive /c0/e252/s6" : [
+			{
+				"EID:Slt" : "252:6",
+				"DID" : 1,
+				"State" : "Onln",
+				"DG" : 0,
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
+			}
+		],
+		"Drive /c0/e252/s6 - Detailed Information" : {
+			"Drive /c0/e252/s6 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 28C (82.40 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s6 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s6 Policies/Settings" : {
+				"Drive position" : "DriveGroup:0, Span:0, Row:4",
+				"Enclosure position" : "0",
+				"Connected Port Number" : "15(path0) ",
+				"Sequence Number" : 2,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		},
+		"Drive /c0/e252/s7" : [
+			{
+				"EID:Slt" : "252:7",
+				"DID" : 0,
+				"State" : "UGood",
+				"DG" : "-",
+				"Size" : "10.691 TB",
+				"Intf" : "SAS",
+				"Med" : "HDD",
+				"SED" : "N",
+				"PI" : "N",
+				"SeSz" : "512B",
+				"Model" : "MG07SCA12TEY    ",
+				"Sp" : "U",
+				"Type" : "-"
+			}
+		],
+		"Drive /c0/e252/s7 - Detailed Information" : {
+			"Drive /c0/e252/s7 State" : {
+				"Shield Counter" : 0,
+				"Media Error Count" : 0,
+				"Other Error Count" : 0,
+				"Drive Temperature" : " 28C (82.40 F)",
+				"Predictive Failure Count" : 0,
+				"S.M.A.R.T alert flagged by drive" : "No"
+			},
+			"Drive /c0/e252/s7 Device attributes" : {
+				"SN" : "XXXXXXXXXXXXX",
+				"Manufacturer Id" : "TOSHIBA ",
+				"Model Number" : "MG07SCA12TEY    ",
+				"NAND Vendor" : "NA",
+				"WWN" : "5000039XXXXXXXXX",
+				"Firmware Revision" : "EI0D",
+				"Firmware Release Number" : "N/A",
+				"Raw size" : "10.692 TB [0x558a00000 Sectors]",
+				"Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Non Coerced size" : "10.691 TB [0x558900000 Sectors]",
+				"Device Speed" : "12.0Gb/s",
+				"Link Speed" : "12.0Gb/s",
+				"Write Cache" : "Disabled",
+				"Logical Sector Size" : "512B",
+				"Physical Sector Size" : "4 KB",
+				"Connector Name" : "00 x1"
+			},
+			"Drive /c0/e252/s7 Policies/Settings" : {
+				"Enclosure position" : "0",
+				"Connected Port Number" : "8(path0) ",
+				"Sequence Number" : 1,
+				"Commissioned Spare" : "No",
+				"Emergency Spare" : "No",
+				"Last Predictive Failure Event Sequence Number" : 0,
+				"Successful diagnostics completion on" : "N/A",
+				"FDE Type" : "None",
+				"SED Capable" : "No",
+				"SED Enabled" : "No",
+				"Secured" : "No",
+				"Cryptographic Erase Capable" : "Yes",
+				"Sanitize Support" : "CryptoErase, OverWrite",
+				"Locked" : "No",
+				"Needs EKM Attention" : "No",
+				"PI Eligible" : "No",
+				"Drive is formatted for PI" : "Yes",
+				"PI type" : 2,
+				"Number of bytes of user data in LBA" : "0 KB",
+				"Certified" : "Yes",
+				"Wide Port Capable" : "No",
+				"Multipath" : "No",
+				"Port Information" : [
+					{
+						"Port" : 0,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x5000039XXXXXXX"
+					},
+					{
+						"Port" : 1,
+						"Status" : "Active",
+						"Linkspeed" : "12.0Gb/s",
+						"SAS address" : "0x0"
+					}
+				]
+			},
+			"Inquiry Data" : "00 00 00 XX XX XX"
+		}
 	}
 }
 ]
 }
-

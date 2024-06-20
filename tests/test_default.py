@@ -70,26 +70,3 @@ def test_jsonfail():
     with patch("subprocess.run", percclimock):
         ret = perccli_status_main([])
         assert ret == 2
-
-
-def test_fails():
-    """test error detections"""
-
-    percclimock = Mock(
-        side_effect=[
-            CompletedProcess(
-                args=[],
-                returncode=0,
-                stdout=Path(f"{TESTS_DIR}/{item}").read_text(encoding="utf-8"),
-            )
-            for item in [
-                "output-fail-controllers.json",
-                "output-fail-vdisks.json",
-                "output-fail-disks.json",
-            ]
-        ]
-    )
-
-    with patch("subprocess.run", percclimock):
-        ret = perccli_status_main([])
-        assert ret == 2

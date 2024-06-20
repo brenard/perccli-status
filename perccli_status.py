@@ -26,6 +26,7 @@ import os
 import json
 import logging
 import subprocess
+import re
 import sys
 from argparse import ArgumentParser
 
@@ -103,11 +104,11 @@ def check_controllers(args):
 
         cid = f'C{controller["Command Status"]["Controller"]}'
         status = resp["Status"]["Controller Status"]
-        model = resp["Basics"]["Product Name"]
-        ram = resp["HwCfg"]["DDR Memory Size(MiB)"]
-        temp = resp["HwCfg"]["Chip temperature(C)"]
+        model = resp["Basics"]["Model"]
+        ram = resp["HwCfg"]["On Board Memory Size"]
+        temp = resp["HwCfg"]["Ctrl temperature(Degree Celsius)"]
         firmware = resp["Version"]["Firmware Version"]
-        bbu = [x["Status"] for x in resp["Energy Pack Info"]]
+        bbu = [x["State"] for x in resp["BBU_Info"]]
 
         if status != "Optimal":
             exit_code = "CRITICAL"
@@ -138,18 +139,26 @@ def check_virtual_disks(args):
     for controller in virtual_data["Controllers"]:
         resp = controller["Response Data"]
 
-        for vdisk in resp["Virtual Drives"]:
-            vid = f'C{controller["Command Status"]["Controller"]} V{vdisk["VD Info"]["DG/VD"]}'
-            type_ = vdisk["VD Info"]["TYPE"]
-            size = vdisk["VD Info"]["Size"]
-            strip = vdisk["VD Properties"]["Strip Size"]
-            status = vdisk["VD Info"]["State"]
-            ospath = vdisk["VD Properties"]["OS Drive Name"]
+        vdrives = {}
+        for key, drive in resp.items():
+            m = re.match(r"^/c[0-9]+/v([0-9]+)$", key)
+            if not m:
+                continue
+            vdrives[m.group(1)] = drive[0]
+
+        for vid, vdrive in vdrives.items():
+            vd_fullid = vdrive["DG/VD"]
+            type_ = vdrive["TYPE"]
+            size = vdrive["Size"]
+            status = vdrive["State"]
+            props = resp[f"VD{vid} Properties"]
+            strip = props["Strip Size"]
+            ospath = props["OS Drive Name"]
 
             if status != "Optl":
                 exit_code = "CRITICAL"
 
-            virtual_info.append([vid, status, type_, size, strip, ospath])
+            virtual_info.append([vd_fullid, status, type_, size, strip, ospath])
 
     return exit_code, virtual_info
 
@@ -173,18 +182,22 @@ def check_phys_disks(args):
     for controller in disk_data["Controllers"]:
         resp = controller["Response Data"]
 
-        for disk in resp["Drives List"]:
-            did = f'C{controller["Command Status"]["Controller"]} P{disk["Drive Information"]["EID:Slt"]}'
-            type_ = f'{disk["Drive Information"]["Intf"]} {disk["Drive Information"]["Med"]}'
-            model = disk["Drive Information"]["Model"]
-            size = disk["Drive Information"]["Size"]
-            status = disk["Drive Information"]["Status"]
-            speed = disk["Drive Detailed Information"]["Path Information"][0][
-                "Negotiated Speed"
-            ]
-            temp = disk["Drive Detailed Information"]["Temperature(C)"]
+        drives = {}
+        for key, drive in resp.items():
+            m = re.match(r"^Drive (/c[0-9]+/e[0-9]+/s[0-9]+)$", key)
+            if not m:
+                continue
+            drives[m.group(1)] = drive[0]
+        for did, drive in drives.items():
+            type_ = f'{drive["Intf"]} {drive["Med"]}'
+            model = drive["Model"].strip()
+            size = drive["Size"]
+            status = drive["State"]
+            info = resp[f"Drive {did} - Detailed Information"]
+            speed = info[f"Drive {did} Device attributes"]["Device Speed"]
+            temp = info[f"Drive {did} State"]["Drive Temperature"]
 
-            if status not in ["Online", "Good"]:
+            if status not in ["Onln", "UGood"]:
                 exit_code = "CRITICAL"
 
             disk_info.append([did, status, type_, model, size, speed, temp])
@@ -197,7 +210,6 @@ def parse_arguments(argv):
 
     parser = ArgumentParser(
         description="Nagios/Opsview plugin to check status of PowerEdge RAID Controller",
-        add_help=False,
     )
     parser.add_argument(
         "--version",
@@ -211,7 +223,7 @@ def parse_arguments(argv):
         "--perccli-path",
         dest="perccli_path",
         help="Path to perccli (default: %(default)s)",
-        default="/opt/MegaRAID/perccli2/perccli2",
+        default="/opt/MegaRAID/perccli/perccli64",
     )
     parser.add_argument(
         "--nagios", action="store_true", help="Nagios/Icinga-like output"

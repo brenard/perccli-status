@@ -3,4 +3,4 @@
 
 ## 0.1 - velar
 
-* initiali implementation based on https://github.com/peterpakos/check_perccli
+* initial implementation based on https://github.com/bodik/perccli-status
